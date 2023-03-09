@@ -12,3 +12,12 @@ plan
  
  
  
+- feature
+
+::get_permutation(arg)
+ head, tail
+ - first arg must be ordered
+
+ but [1,2,3,4], [4,1,2,3] must return the same result
+
+ so if need to find key,, must need reordering

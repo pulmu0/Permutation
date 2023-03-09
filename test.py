@@ -9,9 +9,11 @@ def get_permutation(lists):
         head = k
         tail = [x for j,x in enumerate(lists) if j != i ]
         tails = get_permutation(tail)  #list of list
-        for j,tail in enumerate(tails):
-            k1 = [head,*tail] #tail.insert(0,head)
-            result.append(k1)
+        for j in range(len(tails)):  #,tail in enumerate(tails):
+            tail = tails[j]
+            #k1 = [head,*tail]
+            tail.insert(0,head)
+            result.append(tail)
 
     return result
 
@@ -59,7 +61,7 @@ def testList():
     print(s)
 
 start = []  #1,2,3]
-for i in range(4):
+for i in range(9):
     start.append(i+1)
 
 print(start)
